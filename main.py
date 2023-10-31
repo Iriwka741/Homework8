@@ -25,9 +25,19 @@ import re
 #3. email (наявність @, домену: gmail.com наприклад,
 #мінімальна довжина та максимальна на ваш вибір)
 
-def valid_email(email):
-    pattern = re.compile(r'^[\w\.-]+@[\w\.-]+\.\w{2,4}$')
-    return bool(pattern.match(email))
+#def valid_email(email):
+#    pattern = re.compile(r'^[\w\.-]+@[\w\.-]+\.\w{2,4}$')
+#    return bool(pattern.match(email))
 
-email = "homework8@gmail.com"
-print(valid_email(email))
+#email = "homework8@gmail.com"
+#print(valid_email(email))
+
+########################################################
+#4.ПІБ клієнта (3 слова, мінімальна довжина 2 символи, максимальна довжина 20)
+
+def valid_full_name(name):
+    pattern = re.compile(r'^[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}$')
+    return bool(pattern.match(name))
+
+full_name = "Петренко Петро Петрович"
+print(valid_full_name(full_name))
