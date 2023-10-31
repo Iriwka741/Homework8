@@ -15,9 +15,19 @@ import re
 ###############################################
 #2. Мобільний номер телефону (тільки цифри, можлива наявність плюса, довжина номера)
 
-def valid_mobil_number(number):
-    pattern = re.compile(r"^\+380\(\d{2}\)\d{3}-?\d{2}-?\d{2}$")
-    return bool(pattern.match(number))
+#def valid_mobil_number(number):
+#    pattern = re.compile(r"^\+380\(\d{2}\)\d{3}-?\d{2}-?\d{2}$")
+#    return bool(pattern.match(number))
 
-mobil_number = "+380(12)345-67-65"
-print(valid_mobil_number(mobil_number))
+#mobil_number = "+380(12)345-67-65"
+#print(valid_mobil_number(mobil_number))
+##################################################
+#3. email (наявність @, домену: gmail.com наприклад,
+#мінімальна довжина та максимальна на ваш вибір)
+
+def valid_email(email):
+    pattern = re.compile(r'^[\w\.-]+@[\w\.-]+\.\w{2,4}$')
+    return bool(pattern.match(email))
+
+email = "homework8@gmail.com"
+print(valid_email(email))
