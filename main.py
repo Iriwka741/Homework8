@@ -35,9 +35,9 @@ import re
 ########################################################
 #4.ПІБ клієнта (3 слова, мінімальна довжина 2 символи, максимальна довжина 20)
 
-def valid_full_name(name):
-    pattern = re.compile(r'^[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}$')
-    return bool(pattern.match(name))
+#def valid_full_name(name):
+#    pattern = re.compile(r'^[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}\s[A-Za-zА-Яа-я]{2,20}$')
+#    return bool(pattern.match(name))
 
-full_name = "Петренко Петро Петрович"
-print(valid_full_name(full_name))
+#full_name = "Петренко Петро Петрович"
+#print(valid_full_name(full_name))
